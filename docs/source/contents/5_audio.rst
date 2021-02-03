@@ -1,2 +1,41 @@
 Audio
 =====
+
+About
+-----
+
+Most audio objects in our repository have an audio content model.  The content model is used to preserve audio files and
+serve them in a player.
+
+The Model and Its Binaries
+--------------------------
+
+A standard audio object looks like this:
+
+.. image:: ../images/audio.png
+
+* **RELS-EXT** explains what the object is and how it relates to other objects in the repository.  The file is written in RDF XML and always describes its relationships to other digital objects it is a part of.
+* **OBJ** is the preservation object. This is the most critical binary here. While the quality here may be very low, it is the best thing we have to represent the object.
+* **MODS** contains our descriptive metadata.  Its relationship to RDF and linked data is described in our `https://utk-mods-to-rdf.readthedocs.io/en/latest/>`_.
+* **DC** is generated from our **MODS** on ingest based on a transform we supply.  It is useful to the current Fedora API but is not significant for migration.
+* **TN** a thumbnail.  Since this is not generated, it is significant to migration.
+* **PROXY_MP3** is the MP3 based on the OBJ that is intended to be played in the player.  Sometimes this is generated from the OBJ, but not in all cases.  For this reason, it is significant to migration.
+* **TECHMD** is a FITS generated XML file based on the preservation object (OBJ). Ideally, this would be triples in a :code:`fedora:Resource` (maybe on the file rather than the object) in our next system.
+
+Identifying via RELS-EXT
+------------------------
+
+A standard audio object has RDF that states the collection(s) to which it belongs and its content model:
+
+.. code-block:: turtle
+    :emphasize-lines: 6
+
+    @prefix ns0: <info:fedora/fedora-system:def/relations-external#> .
+    @prefix ns1: <info:fedora/fedora-system:def/model#> .
+
+    <info:fedora/wwiioh:2001>
+      ns0:isMemberOfCollection <info:fedora/collections:wwiioh> ;
+      ns1:hasModel <info:fedora/islandora:sp-audioCModel> .
+
+An audio object always has a triple that states it has a
+:code:`<info:fedora/fedora-system:def/model#hasModel>` of :code:`info:fedora/islandora:sp-audioCModel`.
