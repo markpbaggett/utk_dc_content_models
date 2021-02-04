@@ -41,9 +41,3 @@ A collection object can be determined by the contents of its RELS-EXT datastream
       ns1:hasModel <info:fedora/islandora:collectionCModel> .
 
 Collection objects have a :code:`<info:fedora/fedora-system:def/model#hasModel>` of :code:`<info:fedora/islandora:collectionCModel/>`.
-
-Exceptions
-----------
-
-Our current repository platform, Islandora, also uses this content model to describe various solution packs. These
-objects are listed below and are not relevant to migration:
