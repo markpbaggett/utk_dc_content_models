@@ -8,6 +8,8 @@ Books are made up of two content models:  a book and a page.  The book is a uniq
 page also has its own binaries and has triples that describe its relationship to the book.  The book is served in a
 page turning viewer with the pages. The pages can also be viewed in a pan and zoom viewer.
 
+As of February 4, 2021, the Libraries has :code:`15460` books with a total of :code:`320068` pages.
+
 The Book Model and Its Binaries
 -------------------------------
 

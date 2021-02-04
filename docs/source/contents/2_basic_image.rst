@@ -8,6 +8,7 @@ In the case of a few legacy collections, the Libraries has a few objects with th
 biggest difference between this content model and a large image is that it is not served in an image viewer. Instead,
 the static image file is displayed in an :code:`img` tag.
 
+As of February 4, 2021, the Libraries has :code:`9620` basic image objects.
 
 The Model and Its Binaries
 --------------------------

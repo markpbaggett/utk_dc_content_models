@@ -7,6 +7,8 @@ About
 Video objects in our repository have an video content model.  The content model is used to preserve video files and
 serve them in a player.
 
+As of February 4, 2021, the Libraries has :code:`96` video objects.
+
 The Model and Its Binaries
 --------------------------
 

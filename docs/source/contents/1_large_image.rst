@@ -9,6 +9,8 @@ viewer for user display. Other than pages, this is the most common type of objec
 part of a collection or compound object but never a book.  A large image that is part of a compound object has its own
 distinct metadata that describes unique things about it from other parts of the compound object.
 
+As of February 4, 2021, the Libraries has :code:`37471` large image objects.
+
 The Model and Its Binaries
 --------------------------
 

@@ -7,6 +7,8 @@ About
 Most audio objects in our repository have an audio content model.  The content model is used to preserve audio files and
 serve them in a player.
 
+As of February 4, 2021, the Libraries has :code:`805` audio objects.
+
 The Model and Its Binaries
 --------------------------
 
