@@ -7,6 +7,8 @@ About
 When the original object is a PDF, the PDF content model is used. This content model applies specific actions related to
 the preservation of PDFs and its viewing experience.
 
+As of February 4, 2021, the Libraries has :code:`594` pdf objects.
+
 The Model and Its Binaries
 --------------------------
 
