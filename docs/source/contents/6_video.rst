@@ -14,6 +14,15 @@ A standard video object looks like this:
 
 .. image:: ../images/video.png
 
+* **RELS-EXT** explains what the object is and how it relates to other objects in the repository.  The file is written in RDF XML and always describes its relationships to other digital objects it is a part of.
+* **OBJ** is the preservation object. This is the most critical binary here.
+* **MODS** contains our descriptive metadata.  Its relationship to RDF and linked data is described in our `https://utk-mods-to-rdf.readthedocs.io/en/latest/>`_.
+* **DC** is generated from our **MODS** on ingest based on a transform we supply.  It is useful to the current Fedora API but is not significant for migration.
+* **TN** a thumbnail.  Since this is sometime not generated, it is significant to migration.
+* **MP4** is an access proxy that is intended to be played in the player.  Sometimes this is generated from the OBJ, but not in all cases.  For this reason, it is significant to migration.
+* **TECHMD** is a FITS generated XML file based on the preservation object (OBJ). Ideally, this would be triples in a :code:`fedora:Resource` (maybe on the file rather than the object) in our next system.
+
+
 Identifying via RELS-EXT
 ------------------------
 
