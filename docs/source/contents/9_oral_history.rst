@@ -34,9 +34,9 @@ A standard large image object has RDF that describes it and its relationship to 
 .. code-block:: turtle
     :emphasize-lines: 6
 
-@prefix ns0: <info:fedora/fedora-system:def/relations-external#> .
-@prefix ns1: <info:fedora/fedora-system:def/model#> .
+    @prefix ns0: <info:fedora/fedora-system:def/relations-external#> .
+    @prefix ns1: <info:fedora/fedora-system:def/model#> .
 
-<info:fedora/voloh:10>
-  ns0:isMemberOfCollection <info:fedora/collections:voloh> ;
-  ns1:hasModel <info:fedora/islandora:oralhistoriesCModel> .
+    <info:fedora/voloh:10>
+      ns0:isMemberOfCollection <info:fedora/collections:voloh> ;
+      ns1:hasModel <info:fedora/islandora:oralhistoriesCModel> .
