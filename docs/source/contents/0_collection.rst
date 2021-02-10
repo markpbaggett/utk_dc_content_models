@@ -18,7 +18,7 @@ The items in greene have significance to future migrations while the ones in red
 
 * **RELS_EXT** explains what the object is and how it relates to other objects in the repository.  The file is written in RDF XML and always points "up."  In other words, the collection would point at the collection it is in but not towards the collections it contains.
 * **Collection Policy** is used in some way by Islandora (we're not sure how) but serves no significance to us in the future.
-* **MODS** contains our desciptive metadata.  Its relationship to RDF and linked data is described in our `https://utk-mods-to-rdf.readthedocs.io/en/latest/>`_.
+* **MODS** contains our desciptive metadata.  Its relationship to RDF and linked data is described in our `UTK MODS to RDF documentation<https://utk-mods-to-rdf.readthedocs.io/en/latest/>`_.
 * **DC** is generated from our **MODS**.  It is useful to the current Fedora API but is not significant for migration.
 * When present, **PROJECT** contains files significant to the digital collection.  This can include a number of things included important docs related to rights or provenance.
 * **TN** is the thumbnail that is used by the collection. It is significant for migration. *This could be wrong for this Content model.*
