@@ -18,7 +18,7 @@ A standard video object looks like this:
 
 * **RELS-EXT** explains what the object is and how it relates to other objects in the repository.  The file is written in RDF XML and always describes its relationships to other digital objects it is a part of.
 * **OBJ** is the preservation object. This is the most critical binary here.
-* **MODS** contains our descriptive metadata.  Its relationship to RDF and linked data is described in our `UTK MODS to RDF documentation<https://utk-mods-to-rdf.readthedocs.io/en/latest/>`_.
+* **MODS** contains our descriptive metadata.  Its relationship to RDF and linked data is described in our `UTK MODS to RDF documentation <https://utk-mods-to-rdf.readthedocs.io/en/latest/>`_.
 * **DC** is generated from our **MODS** on ingest based on a transform we supply.  It is useful to the current Fedora API but is not significant for migration.
 * **TN** a thumbnail.  Since this is sometime not generated, it is significant to migration.
 * **MP4** is an access proxy that is intended to be played in the player.  Sometimes this is generated from the OBJ, but not in all cases.  For this reason, it is significant to migration.

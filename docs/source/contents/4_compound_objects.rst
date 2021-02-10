@@ -17,7 +17,7 @@ A standard compound object looks like this:
 .. image:: ../images/compound_object.png
 
 * **RELS-EXT** explains what the object is and how it relates to other objects in the repository.  The file is written in RDF XML and always describes its relationships to other digital objects it is a part of.
-* **MODS** contains descriptive metadata about the compound object. Mapping from MODS to RDF is suggested in our `UTK MODS to RDF documentation<https://utk-mods-to-rdf.readthedocs.io/en/latest/>`_.
+* **MODS** contains descriptive metadata about the compound object. Mapping from MODS to RDF is suggested in our `UTK MODS to RDF documentation <https://utk-mods-to-rdf.readthedocs.io/en/latest/>`_.
 * **DC** is generated from our **MODS** on ingest based on a transform we supply.  It is useful to the current Fedora API but is not significant for migration.
 * **TN** is a thumbnail generated from the first part of a compound object.  It is not significant to migration.
 
