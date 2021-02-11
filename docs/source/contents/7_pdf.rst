@@ -1,4 +1,4 @@
-`UTK MODS to RDF documentation<https://utk-mods-to-rdf.readthedocs.io/en/latest/>`_.PDF
+PDF
 ===
 
 About
