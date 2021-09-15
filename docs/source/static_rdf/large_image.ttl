@@ -9,7 +9,7 @@
 
 <https://localhost/my_sample_object> a pcdm:Object ;
     rdfs:label: "My sample large image" ;
-    pcdm:hasFile <https://localhost/my_sample_object/OBJ> ;
+    pcdm:hasFile <https://localhost/my_sample_object/OBJ>, <https://localhost/my_sample_object/PRESERVATION>, <https://localhost/my_sample_object/TN> ;
     pcdm:memberOf <https://localhost/my_sample_collection> ;
     dcterms:title "My sample large image" ;
     dcterms:abstract "A description or abstract that represents my large image" ;
