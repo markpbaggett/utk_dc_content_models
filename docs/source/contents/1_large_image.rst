@@ -11,8 +11,8 @@ distinct metadata that describes unique things about it from other parts of the 
 
 As of February 4, 2021, the Libraries has :code:`37471` large image objects.
 
-The Model and Its Binaries
---------------------------
+Islandora 7: The Model and Its Binaries
+---------------------------------------
 
 A standard large image object looks like this:
 
@@ -28,8 +28,8 @@ A standard large image object looks like this:
 * **TECHMD** is a FITS generated XML file based on the preservation object (OBJ). Ideally, this would be triples in a :code:`fedora:Resource` (maybe on the file rather than the object) in our next system.
 
 
-Identifying via RELS-EXT
-------------------------
+Islandora 7: Identifying via RELS-EXT
+-------------------------------------
 
 A standard large image object has RDF that describes it and its relationship to other objects.  It always has a
 :code:`<info:fedora/fedora-system:def/model#hasModel>` of :code:`info:fedora/islandora:sp_large_image_cmodel` like this:
@@ -64,3 +64,30 @@ As you can see above, the RDF states that the large image :code:`info:fedora/100
 It also has a :code:`<http://islandora.ca/ontology/relsext#isSequenceNumberOfpcard00_100201>` of :code:`2` indicating
 that it should be sorted in second position (our indexes start at 1 not 0). Compound objects are discussed in greater
 detail elsewhere in the document.
+
+Reimagining Large Image with PCDM
+---------------------------------
+
+This section describes how we envision a large image remodeled with PCDM.
+
+A large image is a :code:`pcdm:Object` with many files and a member of at least one Fedora collection.
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models> .
+    @prefix pcdmuse: <http://pcdm.org/use> .
+
+    <https://localhost/my_sample_object> a pcdm:Object ;
+        rdfs:label: "My sample large image" ;
+        pcdm:hasFile <https://localhost/my_sample_object/OBJ> ;
+        pcdm:memberOf <https://localhost/my_sample_collection> .
+
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models> .
+    @prefix pcdmuse: <http://pcdm.org/use> .
+
+    <https://localhost/my_sample_object/OBJ> a pcdm:File, pcdmuse:IntermediateFile ;
+        rdfs:label "OBJ for My Sample Object" ;
+        pcdm:fileOf <https://localhost/my_sample_object> .
