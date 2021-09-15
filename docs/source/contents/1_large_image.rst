@@ -82,6 +82,9 @@ A large image is a :code:`pcdm:Object` with many files and a member of at least 
         pcdm:hasFile <https://localhost/my_sample_object/OBJ> ;
         pcdm:memberOf <https://localhost/my_sample_collection> .
 
+In our next system, we want a :code:`pcdm:IntermediateFile` to be used to generate derivatives if we are unable to
+generate those on the fly with IIIF. We think about this file being similar to our OBJ in our current system in that it
+is the file where derivatives are derived from.
 
 .. code-block:: turtle
 
