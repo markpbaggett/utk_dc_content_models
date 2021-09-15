@@ -1,7 +1,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ebucore: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
 @prefix edm: <http://www.europeana.eu/schemas/edm/> .
 @prefix pcdm: <http://pcdm.org/models> .
 @prefix pcdmuse: <http://pcdm.org/use> .
+@prefix premishash: <http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema> .
 @prefix relators: <http://id.loc.gov/vocabulary/relators/> .
 
@@ -19,4 +21,24 @@
 
 <https://localhost/my_sample_object/OBJ> a pcdm:File, pcdmuse:IntermediateFile ;
     rdfs:label "OBJ for My Sample Object" ;
-    pcdm:fileOf <https://localhost/my_sample_object> .
+    pcdm:fileOf <https://localhost/my_sample_object> ;
+    premishash:md5 "0cc175b9c0f1b6a831c399e269772661" ;
+    ebucore:hasmimetype "image/jp2" ;
+    ebucore:filesize "361730" ;
+    ebucore:filename "my_sample_file.jp2" .
+
+<https://localhost/my_sample_object/PRESERVATION> a pcdm:File, pcdmuse:PreservationFile ;
+    rdfs:label "Original and Untouched Digitized file" ;
+    pcdm:fileOf <https://localhost/my_sample_object> ;
+    premishash:md5 "07159c47ee1b19ae4fb9c40d480856c4" ;
+    ebucore:hasmimetype "image/tiff" ;
+    ebucore:filesize "16940000" ;
+    ebucore:filename "my_sample_file_original.tif" .
+
+<https://localhost/my_sample_object/TN> a pcdm:File, pcdmuse:ThumbnailImage ;
+    rdfs:label "A thumbnail generated from the OBJ (if IIIF not good enough)" ;
+    pcdm:fileOf <https://localhost/my_sample_object> ;
+    premishash:md5 "d3b07384d113edec49eaa6238ad5ff00" ;
+    ebucore:hasmimetype "image/png" ;
+    ebucore:filesize "47161" ;
+    ebucore:filename "my_sample_file_small.png" .
